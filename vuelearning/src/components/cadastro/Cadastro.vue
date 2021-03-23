@@ -1,22 +1,22 @@
 <template>
   <div>
-    <h1 class="centralizado">Cadastro</h1>
+    <h1 class="centralizado">Register</h1>
     <h2 class="centralizado"></h2>
 
     <form @submit.prevent="grava()">
       <div class="controle">
-        <label for="titulo">TÍTULO</label>
+        <label for="titulo">Title</label>
         <input id="titulo"  autocomplete="off" v-model.lazy="foto.titulo"/>
       </div>
 
       <div class="controle">
-        <label for="url">URL</label>
+        <label for="url">Url</label>
         <input id="url" autocomplete="off" v-model.lazy="foto.url" />
         <imagem-responsiva v-show="foto.url" :url="foto.url" :titulo="foto.url"/>
       </div>  
 
       <div class="controle">
-        <label for="descricao">DESCRIÇÃO</label>
+        <label for="descricao">Description</label>
         <textarea id="descricao" autocomplete="off" v-model.lazy="foto.descricao"></textarea>
       </div>
 
@@ -72,7 +72,7 @@ export default {
 }
 .controle label {
   display: block;
-  font-weight: bold;
+  color: #8eb8ad;
 }
 
 .controle label + input,
@@ -80,6 +80,11 @@ export default {
   width: 100%;
   font-size: inherit;
   border-radius: 5px;
+}
+
+h1{
+  color: #8eb8ad;
+  font-weight: 400;
 }
 
 .centralizado {

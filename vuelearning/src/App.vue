@@ -24,7 +24,6 @@ export default {
 </script>
 <style>
 .corpo {
-  font-family: Helvetica, sans-serif;
   margin: 0 auto;
   width: 96%;
 }
@@ -37,4 +36,14 @@ export default {
 .pagina-leave-active {
   transition: opacity 0.9s;
 }
-</style>
+ul{
+  list-style-type: none;
+  padding: 0;
+}
+li{
+  list-style-type: none;
+}
+li a{
+  text-decoration: none;
+}
+</style> 

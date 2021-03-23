@@ -7,7 +7,7 @@
       type="search"
       class="filtro"
       @input="filtro = $event.target.value"
-      placeholder="digite para filtrar"
+      placeholder="type to filter"
     />
     <ul class="lista-fotos">
       <li class="lista-fotos-item" v-for="(foto, index) of fotosComFiltro" :key="index">
@@ -45,7 +45,7 @@ export default {
 
   data() {
     return {
-      titulo: "vuelearning",
+      titulo: "Home",
       fotos: [],
       filtro: "",
       mensagem: ''
@@ -56,7 +56,8 @@ export default {
     remove(foto) {
 
         this.service.apaga(foto._id)
-        .then(() =>{
+        .response((resp) =>{
+          console.log(resp);
         let indice = this.fotos.indexOf(foto);
         this.fotos.splice(indice,1);
         this.mensagem = 'Foto removida com sucesso';
@@ -104,6 +105,14 @@ export default {
 
 .filtro {
   display: block;
-  width: 100%;
+  width: 55%;
+  margin: 0 23%;
+  border: 2px solid #000;
+  padding: 10px;
+  text-align: center;
+}
+
+.filtro:focus {
+  border: none;
 }
 </style>
